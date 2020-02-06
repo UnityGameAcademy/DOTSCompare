@@ -46,8 +46,11 @@ namespace DOTSCompare
         {
             if (burstTextMesh != null)
             {
-                burstTextMesh.text = (state) ? "true":"false";
+                burstTextMesh.text = (state) ? "true" : "false";
             }
+
+            burstTextMesh.transform.parent.gameObject.SetActive((GameManager.Instance.Mode != DemoMode.Classic));
+
         }
 
         public void ShowJobsText(bool state)
@@ -56,7 +59,13 @@ namespace DOTSCompare
             {
                 jobsTextMesh.text = (state) ? "true" : "false";
             }
+
+            jobsTextMesh.transform.parent.gameObject.SetActive((GameManager.Instance.Mode != DemoMode.Classic));
+
+            
         }
+
+
 
     }
 }
