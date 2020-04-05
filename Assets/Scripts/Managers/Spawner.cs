@@ -69,7 +69,8 @@ namespace DOTSCompare
                     typeof(RenderMesh),
                     typeof(LocalToWorld),
                     typeof(MoveForward),
-                    typeof(Scale)
+                    typeof(Scale),
+                    typeof(RenderBounds)
                 );
             }
         }
